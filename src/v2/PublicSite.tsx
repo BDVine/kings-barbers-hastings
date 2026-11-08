@@ -312,10 +312,6 @@ export const PublicSite: React.FC<Props> = ({ brand, onSignIn, onJoin, onStaff }
               <span>Staff login (PIN: 2000)</span>
               <ChevronRight className="w-4 h-4" />
             </button>
-            <a href="/" className="press flex items-center justify-between py-3 text-[15px] text-b-muted">
-              <span>Switch to Design A (Signboard style)</span>
-              <ChevronRight className="w-4 h-4" />
-            </a>
           </div>
           <p className="mt-6 text-[12px] text-b-muted/70">© {new Date().getFullYear()} Kings Barbers. All rights reserved.</p>
         </footer>
