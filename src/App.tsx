@@ -222,7 +222,7 @@ export function App() {
               }`}
             >
               <ShieldAlert className="w-3 h-3" />
-              <span>Staff Till</span>
+              <span>Barber Admin</span>
             </button>
           </div>
         </header>
@@ -310,7 +310,7 @@ export function App() {
               }`}
             >
               <ShieldAlert className="w-4 h-4" />
-              <span className="text-[10px]">Staff Till</span>
+              <span className="text-[10px]">Barber Admin</span>
             </button>
           </div>
         </nav>
