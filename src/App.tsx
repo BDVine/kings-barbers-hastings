@@ -185,14 +185,14 @@ export function App() {
 
       {/* Main Mobile App Container */}
       <div
-        className={`w-full bg-kings-black min-h-screen md:min-h-[844px] relative flex flex-col transition-all ${
+        className={`w-full bg-kings-black min-h-[100dvh] md:min-h-[844px] relative flex flex-col transition-all ${
           phoneFrameMode
             ? 'md:max-w-[430px] md:border-2 md:border-kings-gold/60 md:shadow-[0_25px_70px_rgba(0,0,0,0.9)] md:overflow-hidden'
             : 'max-w-2xl md:border md:border-white/25'
         }`}
       >
         {/* Sticky App Top Header */}
-        <header className="sticky top-0 z-30 bg-kings-black border-b-2 border-kings-gold/50 px-4 py-3 flex items-center justify-between">
+        <header className="sticky top-0 z-30 bg-kings-black border-b-2 border-kings-gold/50 px-4 py-3 pt-[calc(env(safe-area-inset-top)+12px)] flex items-center justify-between">
           <button
             onClick={() => setActiveTab('home')}
             className="flex items-center gap-2.5 text-left"
@@ -213,6 +213,12 @@ export function App() {
           </button>
 
           <div className="flex items-center gap-1.5">
+            <a
+              href="/b/"
+              className="px-2 py-1 text-[10px] font-extrabold uppercase tracking-wider border border-kings-gold/60 bg-kings-gold/15 text-kings-gold hover:bg-kings-gold hover:text-kings-black transition"
+            >
+              Design B →
+            </a>
             <button
               onClick={() => setActiveTab('admin')}
               className={`px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider border transition flex items-center gap-1 ${
@@ -272,7 +278,7 @@ export function App() {
         </main>
 
         {/* Fixed Bottom Mobile App Navigation Bar */}
-        <nav className="sticky bottom-0 z-40 bg-black border-t-2 border-kings-gold/50">
+        <nav className="sticky bottom-0 z-40 bg-black border-t-2 border-kings-gold/50 pb-[env(safe-area-inset-bottom)]">
           <div className="grid grid-cols-3 divide-x divide-white/15">
             <button
               onClick={() => setActiveTab('home')}

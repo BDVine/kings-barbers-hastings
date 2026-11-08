@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design B base: native-feeling on iPhone ---------- */
+html {
+  background: #0B0A09;
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0B0A09;
+  color: #F3EDE0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* iOS Safari zooms the page if an input is under 16px — prevent that */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+@layer utilities {
+  /* Safe areas for notch / Dynamic Island / home indicator */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pb-safe-plus {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
+  }
+  .top-safe {
+    top: env(safe-area-inset-top);
+  }
+
+  /* Press feedback like native iOS controls */
+  .press {
+    transition: transform 0.12s ease, opacity 0.12s ease, background-color 0.15s ease;
+  }
+  .press:active {
+    transform: scale(0.97);
+    opacity: 0.85;
+  }
+
+  .glass {
+    background: rgba(21, 19, 18, 0.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* Security-print pattern for the membership pass */
+  .guilloche {
+    background-image:
+      repeating-radial-gradient(circle at 110% -10%, rgba(201, 164, 92, 0.10) 0 1px, transparent 1px 6px),
+      repeating-radial-gradient(circle at -10% 110%, rgba(201, 164, 92, 0.07) 0 1px, transparent 1px 8px);
+  }
+
+  .pole-stripe {
+    background: repeating-linear-gradient(
+      -45deg,
+      #B3262F 0 8px,
+      #F3EDE0 8px 16px,
+      #1C2A4A 16px 24px,
+      #F3EDE0 24px 32px
+    );
+  }
+
+  .hairline {
+    border-color: rgba(243, 237, 224, 0.09);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}

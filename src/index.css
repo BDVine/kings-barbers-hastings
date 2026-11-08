@@ -66,3 +66,9 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* iOS: stop Safari zooming in when an input is tapped */
+@supports (-webkit-touch-callout: none) {
+  input, select, textarea { font-size: 16px !important; }
+}
+
