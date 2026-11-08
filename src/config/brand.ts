@@ -47,8 +47,8 @@ export const KINGS_BRAND: BrandConfig = {
   displayName: 'THE KINGS BARBER',
   tagline: "Hastings' Traditional & Modern Grooming Since 2000",
   established: 'EST. 2000',
-  logoUrl: '/assets/kings-crest.png',
-  storefrontUrl: '/assets/kings-storefront.png',
+  logoUrl: './assets/kings-crest.png',
+  storefrontUrl: './assets/kings-storefront.png',
   facebookUrl: 'https://www.facebook.com/kings.barber.1/?locale=en_GB',
   subscription: {
     monthlyPrice: 25,
